@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- <h3>bài tập nộp: Quản lý tuyển sinh</h3>
+    <div class="form-group"> -->
+    <!-- TÍNH CƯỚC GRAB
+    </span> -->
+    <h3>bài tập nộp: Quản lý tuyển sinh</h3>
+    <div class="form-group">
+        <p>Nhập điểm môn thứ 1</p>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" name="Subject1st" id="Subject1st" aria-describedby="#"
+                placeholder="Môn thứ 1">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <p>Nhập điểm môn thứ 2</p>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" name="Subject2nd" id="Subject2nd" aria-describedby="helpId"
+                placeholder="Môn thứ 2">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+    </div>
+    <div class="form-group">
+        <p>Nhập điểm môn thứ 3</p>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" name="Subject3rd" id="Subject3rd" aria-describedby="helpId"
+                placeholder="Môn thứ 3">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div>
+            <h4>Khu vực ưu tiên</h4>
+            <ul>
+                <li class="type">
+                    <input id="Object1" type="radio" name="selector">
+                    <label for="Object1">2.5 </label>
+
+                    <div class="check"></div>
+                </li>
+
+                <li class="type">
+                    <input id="Object2" type="radio" name="selector">
+                    <label for="Object2">1.5</label>
+                    <div class="check"></div>
+                </li>
+
+                <li class="type">
+                    <input id="Object3" type="radio" name="selector">
+                    <label for="Object3">1</label>
+                    <div class="check"></div>
+                </li>
+                <li class="type">
+                    <input id="Object4" type="radio" name="selector">
+                    <label for="Object4">Không thuộc khu vực ưu tiên</label>
+                    <div class="check"></div>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div>
+            <h4>Đối tượng ưu tiên</h4>
+            <ul>
+                <li class="type">
+                    <input id="A" type="radio" name="selector2">
+                    <label for="A">2</label>
+
+                    <div class="check"></div>
+                </li>
+
+                <li class="type">
+                    <input id="B" type="radio" name="selector2">
+                    <label for="B">1</label>
+                    <div class="check"></div>
+                </li>
+
+                <li class="type">
+                    <input id="C" type="radio" name="selector2">
+                    <label for="C">0.5</label>
+                    <div class="check"></div>
+                </li>
+                <li class="type">
+                    <input id="D" type="radio" name="selector2">
+                    <label for="D">Không thuộc đối tượng ưu tiên</label>
+                    <div class="check"></div>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <button onclick="totalScore ()" id="" class=""> Kết quả </button>
+    <br>
+    <br>
+    <div class="mt-2 arlet alert-success">
+        
+            kết quả: <span id="result"></span>
+  
+    </div>
+
+
+
+
+
+
+
+
+    <!-- </div>
+    <div style="clear:both;"></div>
+
+    <form class="contact100-form">
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <h2>Nhập vào số KM </h2>
+            <input class="input100" type="text" name="name" placeholder="Số KM ...">
+            <span class="focus-input100"></span>
+
+        </div>
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <h2>Nhập thời gian chờ </h2>
+            <input class="input100" type="text" name="name" placeholder="Thời gian chờ  ...">
+            <span class="focus-input100"></span>
+
+        </div>
+
+        <div class="wrap-contact100-form-btn">
+            <div class="contact100-form-bgbtn"></div>
+            <button type="button" class="contact100-form-btn">
+                TÍNH TIỀN
+            </button>
+        </div>
+        <div class="wrap-contact100-form-btn">
+            <div class="contact100-form-bgbtn"></div>
+            <button type="button" class="contact100-form-btn" data-toggle="modal" data-target="#exampleModal">
+                IN HÓA ĐƠN
+            </button>
+        </div>
+    </form>
+
+    <div style="clear:both"></div>
+    <div id="divThanhTien" class="dongia">
+        <h2>Thành tiền:
+            <span id="xuatTien" class="xuatTien"></span>
+            vnd
+        </h2> -->
+    </div>
+    </div>
+    </div>
+
+
+    <!-- </div> -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
