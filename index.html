@@ -18,33 +18,31 @@
     <!-- TÍNH CƯỚC GRAB
     </span> -->
     <h3>bài tập nộp: Quản lý tuyển sinh</h3>
-    <div class="form-group">
-        <p>Nhập điểm môn thứ 1</p>
-        <div class="form-group">
-            <label for=""></label>
-            <input type="text" class="form-control" name="Subject1st" id="Subject1st" aria-describedby="#"
-                placeholder="Môn thứ 1">
-            <small id="helpId" class="form-text text-muted"></small>
-        </div>
+    <div class="alert alert-danger">
+        <p>- Điểm tổng kết của 3 môn thi
+        </p>
+        <p> - Điểm ưu bao gồm điểm ưu tiên theo khu vực và điểm ưu tiên theo đối tượng </p>
 
     </div>
-    <div class="form-group">
-        <p>Nhập điểm môn thứ 2</p>
-        <div class="form-group">
-            <label for=""></label>
-            <input type="text" class="form-control" name="Subject2nd" id="Subject2nd" aria-describedby="helpId"
-                placeholder="Môn thứ 2">
-            <small id="helpId" class="form-text text-muted"></small>
+    <div class=" form-group row">
+        <div class="col-3">
+            <p>Nhập diểm môn thứ nhất</p>
+            <input class="from-control" id="monthu1">
+        </div>
+        <div class="col-3">
+            <p>Nhập diểm môn thứ hai</p>
+            <input class="from-control" id="monthu2">
+        </div>
+        <div class="col-3">
+            <p>Nhập diểm môn thứ ba</p>
+            <input class="from-control" id="monthu3">
+        </div>
+        <div class="col-3">
+            <p>Nhập diểm Chuẩn hội đồng</p>
+            <input class="from-control" id="diemchuan">
         </div>
     </div>
-    <div class="form-group">
-        <p>Nhập điểm môn thứ 3</p>
-        <div class="form-group">
-            <label for=""></label>
-            <input type="text" class="form-control" name="Subject3rd" id="Subject3rd" aria-describedby="helpId"
-                placeholder="Môn thứ 3">
-            <small id="helpId" class="form-text text-muted"></small>
-        </div>
+
     </div>
     <div class="d-flex justify-content-around">
         <div>
@@ -107,83 +105,66 @@
                 </li>
             </ul>
         </div>
-        
+
 
     </div>
-    <button onclick="totalScore ()" id="" class=""> Kết quả </button>
-    <br>
-    <br>
-    <div class="mt-2 arlet alert-success">
-        
-            kết quả: <span id="result"></span>
-  
+    <div class="form-group">
+        <button id="btnresult" class="btn btn-success"> Kết quả </button>
     </div>
 
-
-
-
-
-
-
-
-    <!-- </div>
-    <div style="clear:both;"></div>
-
-    <form class="contact100-form">
-        <div class="wrap-input100 validate-input" data-validate="Name is required">
-            <h2>Nhập vào số KM </h2>
-            <input class="input100" type="text" name="name" placeholder="Số KM ...">
-            <span class="focus-input100"></span>
-
+    <div class="form-group">
+        <p class="alert alert-success" id="ketqua">ket quả</p>
+    </div>
+<br>
+    <h3>bài tập nộp: Tính tiền điện</h3>
+    <div class="alert alert-danger">
+        <h4>bảng giá tiền điện</h4>
+        <p>50 kw đầu : 500d/kw</p>
+        <p>50 kw kế : 650d/kw</p>
+        <p>100 kw kế : 850d/kw</p>
+        <p>150 kw kế : 1100d/kw</p>
+        <p>Còn lại : 1300d/kw</p>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <p>Nhập Tên</p>
+            <input class="from-control" id="name">
         </div>
-        <div class="wrap-input100 validate-input" data-validate="Name is required">
-            <h2>Nhập thời gian chờ </h2>
-            <input class="input100" type="text" name="name" placeholder="Thời gian chờ  ...">
-            <span class="focus-input100"></span>
-
+        <div class="col-6">
+            <p>Nhập số kw tiêu thụ</p>
+            <input class="from-control" id="consumptionRate">
         </div>
-
-        <div class="wrap-contact100-form-btn">
-            <div class="contact100-form-bgbtn"></div>
-            <button type="button" class="contact100-form-btn">
-                TÍNH TIỀN
-            </button>
-        </div>
-        <div class="wrap-contact100-form-btn">
-            <div class="contact100-form-bgbtn"></div>
-            <button type="button" class="contact100-form-btn" data-toggle="modal" data-target="#exampleModal">
-                IN HÓA ĐƠN
-            </button>
-        </div>
-    </form>
-
-    <div style="clear:both"></div>
-    <div id="divThanhTien" class="dongia">
-        <h2>Thành tiền:
-            <span id="xuatTien" class="xuatTien"></span>
-            vnd
-        </h2> -->
     </div>
+    <div class="form-group">
+        <button id="btncount" class="btn btn-success"> Tính tiền</button>
     </div>
-    </div>
+    <div class="form-group">
+        <p class="alert alert-success" id="count">Kết quả</p>
 
 
-    <!-- </div> -->
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+
+
+
+
+        <!-- </div> -->
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="./index.js"></script>
 </body>
 
 </html>

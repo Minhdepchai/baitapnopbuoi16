@@ -1,22 +1,9 @@
-function totalScore() {
-    var benchmark = 0;
-    var Subject1st = +document.getElementById("Subject1st").value;
-    var Subject2nd = +document.getElementById("Subject2nd").value;
-    var Subject3rd = +document.getElementById("Subject3rd").value;
-    var totalScore;
-    var priorityPoint;
-    var A = 2.5;
-    var B =  1.5;
-    var C = 1 ;
-    var D = 0;
-    var H= 2;
-    var J = 1;
-    var K =0.5;
-    var L = 0;
 
-
-    var Category;
-    var Object;
+document.getElementById("btnresult").onclick = function () {
+    var Subject1st = +document.getElementById("monthu1").value;
+    var Subject2nd = + document.getElementById("monthu2").value;
+    var Subject3rd = +document.getElementById("monthu3").value;
+    var benchmark = +document.getElementById("diemchuan").value;
     var AInput = document.getElementById("A");
     var BInput = document.getElementById("B");
     var CInput = document.getElementById("C");
@@ -25,36 +12,71 @@ function totalScore() {
     var Object2Input = document.getElementById("Object2");
     var Object3Input = document.getElementById("Object3");
     var Object4Input = document.getElementById("Object4");
-    if (Object1Input === true) {
-        Object = H;
+    var result = "";
+    var Object = "";
+    var Category = "";
 
-    } else if (Object2Input === true) {
-        Object = J ;
-    } else if (Object3Input === true) {
-        Object = K ;
-    } else if (Object4Input === true) {
-        Object = L;
+    if (Object1Input.checked === true) {
+        Object = 2.5;
+
+    } else if (Object2Input.checked === true) {
+        Object = 1.5;
+    } else if (Object3Input.checked === true) {
+        Object = 1;
+    } else if (Object4Input.checked === true) {
+        Object = 0;
     } else {
         alert("Vui lòng chọn khu vực ưu tiên"); return;
     };
 
+
     if (AInput.checked === true) {
-        Category = A;
+        Category = 2;
 
     } else if (BInput.checked === true) {
-        Category = B;
+        Category = 1;
     } else if (CInput.checked === true) {
-        Category = C ;
+        Category = 0.5;
     } else if (DInput.checked === true) {
-        Category = D;
+        Category = 0;
     } else {
-        alert("Vui lòng chọn đối tượng ưu tiên"); return;
+        alert("Vui lòng chọn đối tượng ưu tiên"); return
     };
 
 
-    totalScore = Subject1st + Subject2nd + Subject3rd + Category + Object
 
-    document.getElementById('totalScore').innerHTML = result;
 
+
+    if ((Subject1st + Subject2nd + Subject3rd + Object + Category) >= benchmark && Subject1st > 0 && Subject2nd > 0 && Subject3rd > 0) {
+        result = "Đậu";
+    } else { result = "Rớt"; }
+
+
+    result = "kết quả" + result
+    document.getElementById("ketqua").innerHTML = result
 }
 
+
+document.getElementById("btncount").onclick = function () {
+    var names = document.getElementById("name").value;
+    var consumptionRate = Number(document.getElementById("consumptionRate").value);
+    var Price = " ";
+    if (consumptionRate > 0 && consumptionRate <= 50) {
+        Price = consumptionRate * 500;
+    } else if (consumptionRate > 50 && 100 >= consumptionRate) {
+        Price = (consumptionRate * 500) + (150 * (consumptionRate - 50));
+    }
+    else if (consumptionRate > 100 && 150 >= consumptionRate) {
+        Price = (consumptionRate * 500) + (150 * (consumptionRate - 50)) + (200 * (consumptionRate - 100));
+    }
+    else if (150 < consumptionRate && consumptionRate <= 350) {
+        Price =
+        (consumptionRate * 500) + (150 * (consumptionRate - 50)) + (200 * (consumptionRate - 100)) + (250 * (consumptionRate - 150));
+    }
+    else (
+        Price = (consumptionRate * 500) + (150 * (consumptionRate - 50)) + (200 * (consumptionRate - 100)) + (250 * (consumptionRate - 150)) + (200 * (consumptionRate - 350))
+    );
+
+    Price = names + Price;
+    document.getElementById("count").innerHTML = Price;
+}
