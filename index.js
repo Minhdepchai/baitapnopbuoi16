@@ -86,24 +86,26 @@ document.getElementById("btnTaxMoney").onclick = function () {
     var TotalAnnualIncome = Number(document.getElementById("TotalAnnualIncome").value);
     var acmout = " ";
     var nq = (TotalAnnualIncome - 4e+6 - (NumberOfDependents * 1600000))
-    var nw = (60e+6 - 4e+6 - (NumberOfDependents * 1600000))
-    var ne = (TotalAnnualIncome -60e+6 )
-    var nr =  
 
     if (TotalAnnualIncome <= 60e+6) {
         acmout = nq * 0.05;
 
     } else if (TotalAnnualIncome <= 120e+6) {
-        acmout = (nw * 0.05) + ( ne * 0.1);
-        // 110tr => 60tr *0.05 + (110tr-60tr) * 0.1
+        acmout = (60e+6 * 0.05) + ( ( nq-60e+6)*0.1) ;
+       
     } else if (TotalAnnualIncome <= 210e+6) { 
-        acmout = (nw * 0.05)+ ( nr * 0.1)
-    };
-        
-     else if (TotalAnnualIncome <= 384e+6) { }; 
-     else if (TotalAnnualIncome <= 624e+6) { }; 
-     else if (TotalAnnualIncome <= 960e+6) { }; 
-     else (TotalAnnualIncome > 960e+6) { };
+        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*(nq-120e+6))
+    } else if (TotalAnnualIncome <= 384e+6) { 
+        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*(nq-210e+6))
+     } 
+     else if (TotalAnnualIncome <= 624e+6) {
+        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*384e+6)+ (0.25*(nq-384e+6))
+      }
+     else if (TotalAnnualIncome <= 960e+6) { 
+        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*384e+6)+ (0.25*624e+6)+ (0.3*(nq-624e+6))
+
+     }
+     else {acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*384e+6)+ (0.25*624e+6)+ (0.3*960e+6)+(0.35*(nq-960e+6)) };
     acmout = names + acmout.toLocaleString();
 
     document.getElementById("TaxMoney").innerHTML = acmout;
