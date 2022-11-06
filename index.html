@@ -115,7 +115,7 @@
     <div class="form-group">
         <p class="alert alert-success" id="ketqua">ket quả</p>
     </div>
-<br>
+    <br>
     <h3>bài tập nộp: Tính tiền điện</h3>
     <div class="alert alert-danger">
         <h4>bảng giá tiền điện</h4>
@@ -142,6 +142,32 @@
         <p class="alert alert-success" id="count">Kết quả</p>
 
 
+        <br>
+        <h3>bài tập nộp: TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+        <div class="alert alert-danger">
+            <p>Tổng thu nhập năm các bạn tự nhập thêm. Giả sử 1 tháng thu nhập 10tr thì 1 năm sẽ là 10 x 12 = 120tr => các bạn sẽ nhập 120000000
+
+            </p>
+             </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <p>Nhập Tên</p>
+                    <input class="from-control" id="names">
+                </div>
+                <div class="col-4">
+                    <p>tong thu nhap nam</p>
+                    <input class="from-control"  id="TotalAnnualIncome" type="number">
+                </div>
+                <div class="col-4"> 
+                    <p>So nguoi phu thuoc</p>
+                    <input class="from-control" id="NumberOfDependents" type="number">
+                </div>
+            </div>
+                <div class="form-group">
+                    <button id="btnTaxMoney" class="btn btn-success"> Tính tiền thuế</button>
+                </div>
+                <div class="form-group">
+                    <p class="alert alert-success" id="TaxMoney">Kết quả</p></div>
 
 
 
@@ -149,22 +175,26 @@
 
 
 
-        <!-- </div> -->
 
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="./index.js"></script>
+
+                <!-- </div> -->
+
+
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                    crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                    crossorigin="anonymous"></script>
+                <script src="./index.js"></script>
 </body>
 
 </html>
