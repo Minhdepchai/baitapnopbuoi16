@@ -99,14 +99,28 @@ document.getElementById("btnTaxMoney").onclick = function () {
         acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*(nq-210e+6))
      } 
      else if (TotalAnnualIncome <= 624e+6) {
-        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*384e+6)+ (0.25*(nq-384e+6))
+        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*210e+6)+ (0.25*(nq-384e+6))
       }
      else if (TotalAnnualIncome <= 960e+6) { 
-        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*384e+6)+ (0.25*624e+6)+ (0.3*(nq-624e+6))
+        acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*210e+6)+ (0.25*384e+6)+ (0.3*(nq-624e+6))
 
      }
-     else {acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*384e+6)+ (0.25*624e+6)+ (0.3*960e+6)+(0.35*(nq-960e+6)) };
+     else {acmout = (60e+6 * 0.05) + (60e+6*0.1) +(0.15*120e+6) +(0.2*210e+6)+ (0.25*384e+6)+ (0.3*624e+6)+(0.35*(nq-960e+6)) };
     acmout = names + acmout.toLocaleString();
 
     document.getElementById("TaxMoney").innerHTML = acmout;
 }
+
+
+
+document.getElementById("CableCharge").onclick = function () {
+var peopleIsHouses = document.getElementById ("peopleIsHouses").value;
+var business = document.getElementById ("business").value;
+var A ="";
+var B ="";
+var result= " ";
+if () 
+result = names + result.toLocaleString();
+document.getElementById("result1").innerHTML = result;
+}
+
